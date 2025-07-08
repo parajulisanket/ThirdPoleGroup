@@ -107,7 +107,7 @@
           >
             <span>Home</span>
           </a>
-          <a  
+          <a
             href="#"
             class="text-2xl px-4 py-3 rounded-lg transition-colors font-medium text-gray-700 hover:bg-blue-50 focus:bg-blue-100"
           >
@@ -131,57 +131,62 @@
     <!-- end of navigation  -->
 
     <!-- hero section -->
-    <section
-      class="min-h-[90vh] w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 bg-[#fafafa]"
-    >
+    <section class="w-full bg-[#fafafa] py-16 px-4 md:mt-10">
       <div
-        class="w-full md:w-1/2 flex flex-col items-start justify-center space-y-8 relative"
+        class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12"
       >
-        <!-- Background image  -->
-        <div
-          class="absolute inset-0 w-full h-full bg-no-repeat bg-contain bg-left opacity-30 pointer-events-none md:block hidden"
-          style="background-image: url('./assets/bg.png'); z-index: 1"
-          aria-hidden="true"
-        ></div>
+        <div class="md:w-1/2 flex flex-col space-y-10 relative">
+          <!-- Background image  -->
+          <div
+            class="absolute inset-0 w-full h-full bg-no-repeat bg-contain bg-left opacity-30 pointer-events-none md:block hidden"
+            style="background-image: url('./assets/bg.png'); z-index: 1"
+            aria-hidden="true"
+          ></div>
 
-        <!-- Foreground content -->
-        <div class="relative z-10">
-          <h1 class="text-4xl md:text-5xl font-semibold">
-            Third Pole Group are your
-            <br />
-            <!-- media, research & and  -->
-            <span class="text-[#0d6db1]"> media, research & storytelling</span>
-            partners<span class="text-[#ec1f28]">.</span>
-          </h1>
-          <p class="mt-12 text-lg md:text-xl text-gray-700 max-w-lg">
-            Empowering Nepal’s media with impactful stories, research, and
-            cross-cultural collaboration for a brighter future.
-          </p>
-        </div>
-        <!-- Down Arrow -->
-        <a
-          href="#about"
-          class="h-9 w-9 bg-[#ec1f28] flex item-center justify-center"
-        >
-          <div class="z-10 text-center bounce-arrow pt-3">
-            <i class="fa-solid fa-arrow-down text-sm text-white"></i>
+          <!-- Foreground content -->
+          <div class="relative z-10">
+            <h1 class="text-4xl md:text-5xl font-semibold">
+              Third Pole Group are your
+              <br />
+              <span class="text-[#0d6db1]">media, research & storytelling</span>
+              partners<span class="text-[#ec1f28]">.</span>
+            </h1>
+            <p class="mt-12 text-lg md:text-xl text-gray-700 max-w-lg">
+              Empowering Nepal’s media with impactful stories, research, and
+              cross-cultural collaboration for a brighter future.
+            </p>
           </div>
-        </a>
+          <!-- Down Arrow -->
+          <a
+            href="#about"
+            class="h-9 w-9 bg-[#ec1f28] flex items-center justify-center rounded mt-2"
+          >
+            <div class="z-10 text-center bounce-arrow pt-3">
+              <i class="fa-solid fa-arrow-down text-sm text-white"></i>
+            </div>
+          </a>
+        </div>
+        <!-- Right image -->
+        <div class="md:w-1/2 flex justify-end items-center">
+          <img
+            src="./assets/icon.png"
+            alt="Logo"
+            class="max-w-[320px] w-full h-auto"
+          />
+        </div>
       </div>
-      <!-- Right image -->
-      <img src="./assets/icon.png" />
     </section>
 
     <!-- about us part -->
     <section
       id="about"
-      class="relative min-h-[90vh] bg-gray-50 py-20 px-4 overflow-hidden"
+      class="h-auto relative bg-gray-50 py-20 px-4 overflow-hidden md:my-20"
     >
       <img
         src="./assets/icon.png"
         alt=""
         aria-hidden="true"
-        class="absolute inset-0 mx-auto my-auto w-[400px] h-[400px] opacity-10 pointer-events-none select-none left-1/2 -translate-x-1/5 top-64 hidden md:block"
+        class="absolute inset-0 mx-auto my-auto w-[300px] h-[300px] opacity-10 pointer-events-none select-none left-1/2 -translate-x-1/3 top-64 hidden md:block"
       />
 
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -199,14 +204,16 @@
           </p>
         </div>
         <div class="mt-28 text-justify">
-          <p class="text-base/[1.4] font-regular opacity-70">
+          <p class="text-base/[1.4] font-medium opacity-70 leading-relaxed">
             Our team is a blend of journalists, professors, media educators,
             editors, and entrepreneurs—united by a commitment to quality,
             innovation, and integrity. We maintain full transparency and
             regulatory compliance, while driving value for clients, partners,
             and society.
           </p>
-          <p class="text-base/[1.4] font-regular opacity-70 mt-16">
+          <p
+            class="text-base/[1.4] font-medium opacity-70 mt-16 leading-relaxed"
+          >
             We are trusted publishers of
             <span class="text-[#ec1f28]">NewsPolar</span> and
             <span class="text-[#ec1f28]">enewspolar.com</span>, as well as
@@ -228,7 +235,7 @@
         src="./assets/bg.png"
         alt=""
         aria-hidden="true"
-        class="absolute inset-0 mx-auto my-auto w-[700px] h-[700px] opacity-20 pointer-events-none select-none left-1/2 -translate-x-1/2 top-10 hidden md:block"
+        class="absolute inset-0 mx-auto my-auto w-[600px] h-[600px] opacity-20 pointer-events-none select-none left-1/2 -translate-x-1/2 top-10 hidden md:block"
       />
 
       <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -353,121 +360,109 @@
     <!-- project -->
     <section
       id="project"
-      class="relative min-h-[100vh] py-20 px-4 overflow-hidden bg-white"
+      class="relative h-auto py-20 px-4 overflow-hidden bg-white"
     >
       <div
         class="absolute inset-0 z-0 pointer-events-none"
         style="background: #0d6db1"
       ></div>
-      <div
-        class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10"
-      >
-        <!-- Left Side -->
+      <div class="max-w-7xl mx-auto gap-16 items-start relative z-10">
         <div>
           <h2 class="text-4xl md:text-5xl font-semibold text-white mb-6">
-            Delivering value for Nepal’s leading organizations.
+            Nepal’s leading organizations.
           </h2>
-          <p class="text-lg text-gray-100 mb-8 max-w-sm">
+          <p class="text-lg text-gray-100 mb-8">
             We’ve delivered outstanding results for top institutions and
-            impactful projects, with a proven record of excellence.
+            impactful projects.
           </p>
-          <a
+          <!-- <a
             href=""
             class="inline-block px-8 py-4 text-lg shadow loading-hover"
           >
             <span>Our Clients</span>
-          </a>
+          </a> -->
         </div>
-        <!-- Right Side: Projects -->
-        <div class="hidden md:flex flex-col gap-12">
+        <!--  Projects part -->
+        <div class="flex flex-col md:flex-row max-w-7xl gap-y-8 md:gap-x-32">
           <!-- Project 1  -->
-          <div class="flex items-center gap-8 relative lg:left-32">
-            <div class="relative flex flex-col items-center min-w-[180px]">
+          <div
+            class="relative border border-white rounded-xl hover:scale-105 p-2 transition smoothe shadow-2xl overflow-hidden"
+          >
+            <div class="absolute inset-0 bg-black/20 rounded-xl z-0"></div>
+            <div class="relative flex flex-col items-center min-w-[180px] z-10">
               <div class="relative z-10">
-                <div
-                  class="w-32 h-32 bg-white flex items-center justify-center shadow-xl transform"
-                >
+                <div class="w-32 h-32 flex items-center justify-center">
                   <img
                     src="./assets/newspolar.png"
                     alt="Project 1 Logo"
-                    class="w-32 h-32 object-contain"
+                    class="w-32 h-32 object-cover hexagon "
                   />
                 </div>
               </div>
-            </div>
-            <div>
-              <h3 class="text-2xl font-semibold text-white mb-1">NewsPolar</h3>
-              <p class="text-gray-100 mb-2 max-w-xs">
-                Nepal’s trusted digital news platform, delivering
-                up-to-the-minute coverage and thought leadership to a global
-                audience.
-              </p>
-              <a
-                href="https://www.newspolar.com"
-                target="_blank"
-                class="inline-block mt-2 px-6 py-2 loading-hover"
-              >
-                <span> Project</span>
-              </a>
+              <div class="mt-4">
+                <h3 class="text-2xl font-semibold text-white mb-1 text-center">
+                  NewsPolar
+                </h3>
+                <p class="text-gray-100 mb-2 max-w-xs text-center">
+                  Nepal’s trusted digital news platform, delivering
+                  up-to-the-minute coverage and thought leadership to a global
+                  audience.
+                </p>
+              </div>
             </div>
           </div>
+
           <!-- Project 2 -->
-          <div class="flex items-center gap-8 relative lg:right-24">
-            <div class="relative flex flex-col items-center min-w-[180px]">
+          <div
+            class="relative rounded-xl hover:scale-105 p-2 transition smoothe shadow-2xl overflow-hidden border border-white"
+          >
+            <div class="absolute inset-0 bg-black/20 rounded-xl z-0"></div>
+            <div class="relative flex flex-col items-center min-w-[180px] z-10">
               <div class="relative z-10">
-                <div
-                  class="w-32 h-32 bg-white flex items-center justify-center shadow-xl transform"
-                >
+                <div class="w-32 h-32 flex items-center justify-center">
                   <img
                     src="./assets/mountain.jpg"
                     alt="Project 2 Logo"
-                    class="w-32 h-32 object-fit"
+                    class="w-32 h-32 object-cover hexagon"
                   />
                 </div>
               </div>
-            </div>
-            <div>
-              <h3 class="text-2xl font-semibold text-white mb-1">
-                Documentary Series
-              </h3>
-              <p class="text-gray-100 mb-2 max-w-xs">
-                Award-winning documentary storytelling from Nepal’s mountains to
-                the world stage.
-              </p>
-              <a href="#" class="inline-block mt-2 px-6 py-2 loading-hover">
-                <span>Watch Trailer</span>
-              </a>
+              <div class="mt-4">
+                <h3 class="text-2xl font-semibold text-white mb-1 text-center">
+                  Documentary Series
+                </h3>
+                <p class="text-gray-100 mb-2 max-w-xs text-center">
+                  Award-winning documentary storytelling from Nepal’s mountains
+                  to the world stage.
+                </p>
+              </div>
             </div>
           </div>
+
           <!-- Project 3 -->
-          <div class="flex items-center gap-8 relative lg:right-80">
-            <div class="relative flex flex-col items-center min-w-[180px]">
+          <div
+            class="relative rounded-xl hover:scale-105 p-2 transition smoothe shadow-2xl overflow-hidden border border-white"
+          >
+            <div class="absolute inset-0 bg-black/20 rounded-xl z-0"></div>
+            <div class="relative flex flex-col items-center min-w-[180px] z-10">
               <div class="relative z-10">
-                <div
-                  class="w-32 h-32 bg-white flex items-center justify-center shadow-xl transform"
-                >
+                <div class="w-32 h-32 flex items-center justify-center">
                   <img
                     src="./assets/voter.jpeg"
                     alt="Project 3 Logo"
-                    class="w-32 h-32 object-fit"
+                    class="w-32 h-32 object-cover hexagon"
                   />
                 </div>
               </div>
-            </div>
-            <div>
-              <h3 class="text-2xl font-semibold text-white mb-1">
-                Voter Awareness PSA
-              </h3>
-              <p class="text-gray-100 mb-2 max-w-xs">
-                Impactful radio and media campaigns fostering civic
-                participation across Nepal.
-              </p>
-              <a
-                href="#"
-                class="inline-block mt-2 px-6 py-2 bg-white loading-hover"
-              >
-                <spna>Learn More</spna>
-              </a>
+              <div class="mt-4">
+                <h3 class="text-2xl font-semibold text-white mb-1 text-center">
+                  Voter Awareness PSA
+                </h3>
+                <p class="text-gray-100 mb-2 max-w-xs text-center">
+                  Impactful radio and media campaigns fostering civic
+                  participation across Nepal.
+                </p>
+              </div>
             </div>
           </div>
         </div>
