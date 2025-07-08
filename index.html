@@ -78,54 +78,55 @@
       class="fixed inset-0 z-50 bg-white flex transition-opacity duration-200 opacity-0 pointer-events-none"
     >
       <!-- Sidebar Left -->
-      <aside class="w-[340px] min-h-full px-20 py-10 flex flex-col">
+      <aside class="w-[320px] min-h-full flex flex-col px-8 py-10">
         <!-- Logo -->
-        <div>
-          <img
-            src="./assets/logo1.svg"
-            alt="Third Pole Group Logo"
-            class="h-12 w-auto mb-8"
-          />
-        </div>
-        <!-- Navigation List -->
-        <nav class="flex flex-col gap-8 text-lg font-semibold">
-          <a href="#" class="flex items-center gap-3 text-[#0d6db1]">
-            <span>Clients</span>
-            <span class="text-2xl">></span>
-          </a>
-          <a
-            href="#"
-            class="flex items-center gap-3 text-gray-400 font-semibold"
+        <div class="flex">
+          <div class="mb-10">
+            <img
+              src="./assets/logo1.svg"
+              alt="Third Pole Group Logo"
+              class="h-14 w-auto mx-auto"
+            />
+          </div>
+          <!-- Close Button -->
+          <button
+            id="closeBtn"
+            class="absolute top-12 right-8 text-4xl text-gray-700 hover:text-blue-700 transition focus:outline-none"
+            aria-label="Close Side Menu"
+            title="Close"
           >
-            <span>Insights</span>
-            <span class="text-2xl">></span>
+            &times;
+          </button>
+        </div>
+
+        <!-- Navigation List -->
+        <nav class="flex flex-col gap-2">
+          <a
+            href="#"
+            class="text-2xl px-4 py-3 rounded-lg transition-colors font-medium text-gray-700 hover:bg-blue-50 focus:bg-blue-100"
+          >
+            <span>Home</span>
           </a>
           <a
             href="#"
-            class="flex items-center gap-3 text-gray-400 font-semibold"
+            class="text-2xl px-4 py-3 rounded-lg transition-colors font-medium text-gray-700 hover:bg-blue-50 focus:bg-blue-100"
           >
             <span>About</span>
-            <span class="text-2xl">></span>
           </a>
           <a
             href="#"
-            class="flex items-center gap-3 text-gray-400 font-semibold"
+            class="text-2xl px-4 py-3 rounded-lg transition-colors font-medium text-gray-700 hover:bg-blue-50 focus:bg-blue-100"
           >
-            <span>Contact</span>
-            <span class="text-2xl">></span>
+            <span>Business</span>
+          </a>
+          <a
+            href="#"
+            class="text-2xl px-4 py-3 rounded-lg transition-colors font-medium text-gray-700 hover:bg-blue-50 focus:bg-blue-100"
+          >
+            <span>Project</span>
           </a>
         </nav>
       </aside>
-      <!-- Main Content Right -->
-      <main class="flex-1 relative px-20 py-10">
-        <!-- Close Button -->
-        <button
-          id="closeBtn"
-          class="absolute top-8 right-20 text-4xl text-black hover:text-blue-700 focus:outline-none"
-        >
-          &times;
-        </button>
-      </main>
     </div>
     <!-- end of navigation  -->
 
@@ -725,7 +726,9 @@
           &copy; 2025 Third Pole Group Pvt. Ltd. All rights reserved.
         </div>
         <!-- Middle: Policy Links -->
-        <div class="flex flex-wrap gap-4 text-xs md:text-sm text-[#21194d]">
+        <div
+          class="flex flex-wrap gap-4 text-xs px-5 md:px-0 md:text-sm text-[#21194d]"
+        >
           <a href="#" class="hover:underline">Privacy Policy</a>
           <a href="#" class="hover:underline">Cookie Policy</a>
           <a href="#" class="hover:underline">Takedown Policy</a>
