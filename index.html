@@ -1,0 +1,765 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/icon.png" type="image/png" />
+    <title>Third Pole Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+
+    <style>
+      .bar {
+        transition: 0.3s;
+      }
+    </style>
+  </head>
+  <!-- Back to Top Button -->
+  <button
+    id="backToTop"
+    class="h-9 w-9 fixed bottom-6 right-3 z-50 bg-[#ec1f28] text-white text-lg transition-all duration-300 lg:hidden hover:scale-105"
+  >
+    ↑
+  </button>
+  <body class="bg-gray-50">
+    <!-- Navigation bar -->
+    <header class="w-full bg-[#fafafa] md:px-5">
+      <nav
+        class="max-w-7xl mx-auto flex items-center justify-between py-5 px-4 lg:px-0"
+      >
+        <!-- Logo as SVG image -->
+        <a href="/" class="flex items-center select-none cursor-pointer">
+          <img
+            src="./assets/logo1.svg"
+            alt="Third Pole Group Logo"
+            class="h-16 w-auto"
+          />
+        </a>
+        <!-- nav list for desktop -->
+        <div class="hidden sm:flex">
+          <ul class="flex gap-10 text-lg text-[#21194d]">
+            <a href="/">
+              <li class="nav-loading-hover" data-text="Home">Home</li></a
+            >
+            <a href="#about"
+              ><li class="nav-loading-hover" data-text="About">About</li></a
+            >
+            <a href="#business"
+              ><li class="nav-loading-hover" data-text="Business">
+                Business
+              </li></a
+            >
+            <a href="#project"
+              ><li class="nav-loading-hover" data-text="Project">Project</li></a
+            >
+          </ul>
+        </div>
+
+        <!-- Hamburger menu -->
+        <button
+          id="menuBtn"
+          class="group flex flex-col gap-1.5 w-8 h-8 items-center justify-center focus:outline-none md:hidden"
+        >
+          <span class="bar w-8 h-1 bg-black rounded-sm"></span>
+          <span class="bar w-8 h-1 bg-black rounded-sm"></span>
+          <span class="bar w-8 h-1 bg-black rounded-sm"></span>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Fullscreen Side Navigation Overlay  -->
+    <div
+      id="sideNav"
+      class="fixed inset-0 z-50 bg-white flex transition-opacity duration-200 opacity-0 pointer-events-none"
+    >
+      <!-- Sidebar Left -->
+      <aside class="w-[340px] min-h-full px-20 py-10 flex flex-col">
+        <!-- Logo -->
+        <div>
+          <img
+            src="./assets/logo1.svg"
+            alt="Third Pole Group Logo"
+            class="h-12 w-auto mb-8"
+          />
+        </div>
+        <!-- Navigation List -->
+        <nav class="flex flex-col gap-8 text-lg font-semibold">
+          <a href="#" class="flex items-center gap-3 text-[#0d6db1]">
+            <span>Clients</span>
+            <span class="text-2xl">></span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-400 font-semibold"
+          >
+            <span>Insights</span>
+            <span class="text-2xl">></span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-400 font-semibold"
+          >
+            <span>About</span>
+            <span class="text-2xl">></span>
+          </a>
+          <a
+            href="#"
+            class="flex items-center gap-3 text-gray-400 font-semibold"
+          >
+            <span>Contact</span>
+            <span class="text-2xl">></span>
+          </a>
+        </nav>
+      </aside>
+      <!-- Main Content Right -->
+      <main class="flex-1 relative px-20 py-10">
+        <!-- Close Button -->
+        <button
+          id="closeBtn"
+          class="absolute top-8 right-20 text-4xl text-black hover:text-blue-700 focus:outline-none"
+        >
+          &times;
+        </button>
+      </main>
+    </div>
+    <!-- end of navigation  -->
+
+    <!-- hero section -->
+    <section
+      class="min-h-[90vh] w-full flex flex-col md:flex-row items-center justify-between px-6 md:px-20 py-16 bg-[#fafafa]"
+    >
+      <div
+        class="w-full md:w-1/2 flex flex-col items-start justify-center space-y-8 relative"
+      >
+        <!-- Background image  -->
+        <div
+          class="absolute inset-0 w-full h-full bg-no-repeat bg-contain bg-left opacity-30 pointer-events-none md:block hidden"
+          style="background-image: url('./assets/bg.png'); z-index: 1"
+          aria-hidden="true"
+        ></div>
+
+        <!-- Foreground content -->
+        <div class="relative z-10">
+          <h1 class="text-4xl md:text-5xl font-semibold">
+            Third Pole Group are your
+            <br />
+            <!-- media, research & and  -->
+            <span class="text-[#0d6db1]"> media, research & storytelling</span>
+            partners<span class="text-[#ec1f28]">.</span>
+          </h1>
+          <p class="mt-12 text-lg md:text-xl text-gray-700 max-w-lg">
+            Empowering Nepal’s media with impactful stories, research, and
+            cross-cultural collaboration for a brighter future.
+          </p>
+        </div>
+        <!-- Down Arrow -->
+        <a
+          href="#about"
+          class="h-9 w-9 bg-[#ec1f28] flex item-center justify-center"
+        >
+          <div class="z-10 text-center bounce-arrow pt-3">
+            <i class="fa-solid fa-arrow-down text-sm text-white"></i>
+          </div>
+        </a>
+      </div>
+      <!-- Right image -->
+      <img src="./assets/icon.png" />
+    </section>
+
+    <!-- about us part -->
+    <section
+      id="about"
+      class="relative min-h-[90vh] bg-gray-50 py-20 px-4 overflow-hidden"
+    >
+      <img
+        src="./assets/icon.png"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 mx-auto my-auto w-[400px] h-[400px] opacity-10 pointer-events-none select-none left-1/2 -translate-x-1/5 top-64 hidden md:block"
+      />
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div class="mt-10">
+          <h2
+            class="text-4xl md:text-5xl font-semibold text-black mb-6 drop-shadow-sm"
+          >
+            About
+          </h2>
+          <p class="text-xl/[1.4] font-medium mb-4 text-justify">
+            Third Pole Group Pvt. Ltd. is a leading media and research company
+            officially registered in Nepal. We are dedicated to advancing
+            Nepal’s media landscape through impactful storytelling, research,
+            and collaboration.
+          </p>
+        </div>
+        <div class="mt-28 text-justify">
+          <p class="text-base/[1.4] font-regular opacity-70">
+            Our team is a blend of journalists, professors, media educators,
+            editors, and entrepreneurs—united by a commitment to quality,
+            innovation, and integrity. We maintain full transparency and
+            regulatory compliance, while driving value for clients, partners,
+            and society.
+          </p>
+          <p class="text-base/[1.4] font-regular opacity-70 mt-16">
+            We are trusted publishers of
+            <span class="text-[#ec1f28]">NewsPolar</span> and
+            <span class="text-[#ec1f28]">enewspolar.com</span>, as well as
+            creators of documentaries, TV and radio programs, and digital
+            campaigns. As leaders in research, training, and cross-cultural
+            collaboration, we are driven by professionalism, transparency, and a
+            vision for a more connected Nepal.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- what we do section -->
+    <section
+      id="business"
+      class="py-20 px-4 relative bg-gray-100 py-46 h-auto z-10 overflow-x-hidden"
+    >
+      <img
+        src="./assets/bg.png"
+        alt=""
+        aria-hidden="true"
+        class="absolute inset-0 mx-auto my-auto w-[700px] h-[700px] opacity-20 pointer-events-none select-none left-1/2 -translate-x-1/2 top-10 hidden md:block"
+      />
+
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <!-- Left-->
+        <div class="flex flex-col justify-start space-y-12">
+          <!-- Heading-->
+          <div>
+            <h2 class="text-5xl font-semibold leading-tight mb-6">
+              Helping to deliver value<br />for your business.
+            </h2>
+            <p class="text-base text-gray-600 max-w-lg">
+              The pace of change in today’s world places increasing demands on
+              organizations’ ability to execute and deliver projects. Our
+              expertise in media and project management helps leaders deliver
+              value for their business.
+            </p>
+          </div>
+          <!-- Service Block 1 -->
+          <div class="flex items-start gap-6 block-animate">
+            <img
+              src="./assets/Hexblue.png"
+              alt=""
+              class="w-24 h-20 flex-shrink-0 hover:scale-105 hover:-rotate-90"
+            />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Publishing</h3>
+              <p class="text-gray-600 mb-1 max-w-sm">
+                We operate <span class="font-semibold">NewsPolar</span>, a
+                registered Nepali news portal, and
+                <span class="font-semibold">enewspolar.com</span> for global
+                readers, informing society with trusted, timely news.
+              </p>
+            </div>
+          </div>
+          <!-- Service Block 2 -->
+          <div class="flex items-start gap-6 block-animate">
+            <img
+              src="./assets/Hexgreen.png"
+              alt=""
+              class="w-22 h-20 flex-shrink-0 hover:scale-105 hover:-rotate-90"
+            />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Production</h3>
+              <p class="text-gray-600 mb-1 max-w-sm">
+                We produce documentaries, radio/TV programs,
+                tele-advertisements, and PSAs—delivering compelling content for
+                every platform.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right column: 3 service blocks, staggered -->
+        <div class="flex flex-col justify-center space-y-16 block-animate">
+          <!-- Service Block 3 -->
+          <div class="flex items-start gap-6 relative lg:left-32">
+            <img
+              src="./assets/Hexgreen.png"
+              alt=""
+              class="w-22 h-20 flex-shrink-0 hover:scale-105 hover:-rotate-90"
+            />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Collaboration</h3>
+              <p class="text-gray-600 mb-1 max-w-sm">
+                We conduct research and promote economic, social, and cultural
+                exchanges—helping Nepal connect and grow with its neighbors.
+              </p>
+            </div>
+          </div>
+          <!-- Service Block 4 -->
+          <div class="flex items-start gap-6 relative lg:left-32">
+            <img
+              src="./assets/Hexred.png"
+              alt=""
+              class="w-22 h-20 flex-shrink-0 hover:scale-105 hover:-rotate-90"
+            />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Capacity</h3>
+              <p class="text-gray-600 mb-1 max-w-sm">
+                Our team offers media training, mentoring, and expert consulting
+                to strengthen organizations’ communication skills.
+              </p>
+            </div>
+          </div>
+          <!-- Service Block 5 -->
+          <div class="flex items-start gap-6 relative lg:left-32">
+            <img
+              src="./assets/Hexblue.png"
+              alt=""
+              class="w-24 h-20 flex-shrink-0 hover:scale-105 hover:-rotate-90"
+            />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">Digital Strategy</h3>
+              <p class="text-gray-600 mb-1 max-w-sm">
+                We help organizations plan, launch, and scale their digital
+                presence and initiatives for lasting impact.
+              </p>
+            </div>
+          </div>
+          <!-- last block -->
+          <div class="flex items-start gap-6 relative lg:left-32">
+            <img
+              src="./assets/Hexred.png"
+              alt=""
+              class="w-22 h-20 flex-shrink-0 hover:scale-105 hover:-rotate-90"
+            />
+            <div>
+              <h3 class="text-2xl font-semibold mb-2">
+                Cross-Cultural Collaboration
+              </h3>
+              <p class="text-gray-600 mb-1 max-w-sm">
+                We foster economic, social, and cultural exchanges with
+                neighboring countries, building bridges and promoting shared
+                growth.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- project -->
+    <section
+      id="project"
+      class="relative min-h-[100vh] py-20 px-4 overflow-hidden bg-white"
+    >
+      <div
+        class="absolute inset-0 z-0 pointer-events-none"
+        style="background: #0d6db1"
+      ></div>
+      <div
+        class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16 items-start relative z-10"
+      >
+        <!-- Left Side -->
+        <div>
+          <h2 class="text-4xl md:text-5xl font-semibold text-white mb-6">
+            Delivering value for Nepal’s leading organizations.
+          </h2>
+          <p class="text-lg text-gray-100 mb-8 max-w-sm">
+            We’ve delivered outstanding results for top institutions and
+            impactful projects, with a proven record of excellence.
+          </p>
+          <a
+            href=""
+            class="inline-block px-8 py-4 text-lg shadow loading-hover"
+          >
+            <span>Our Clients</span>
+          </a>
+        </div>
+        <!-- Right Side: Projects -->
+        <div class="hidden md:flex flex-col gap-12">
+          <!-- Project 1  -->
+          <div class="flex items-center gap-8 relative lg:left-32">
+            <div class="relative flex flex-col items-center min-w-[180px]">
+              <div class="relative z-10">
+                <div
+                  class="w-32 h-32 bg-white flex items-center justify-center shadow-xl transform"
+                >
+                  <img
+                    src="./assets/newspolar.png"
+                    alt="Project 1 Logo"
+                    class="w-32 h-32 object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-1">NewsPolar</h3>
+              <p class="text-gray-100 mb-2 max-w-xs">
+                Nepal’s trusted digital news platform, delivering
+                up-to-the-minute coverage and thought leadership to a global
+                audience.
+              </p>
+              <a
+                href="https://www.newspolar.com"
+                target="_blank"
+                class="inline-block mt-2 px-6 py-2 loading-hover"
+              >
+                <span> Project</span>
+              </a>
+            </div>
+          </div>
+          <!-- Project 2 -->
+          <div class="flex items-center gap-8 relative lg:right-24">
+            <div class="relative flex flex-col items-center min-w-[180px]">
+              <div class="relative z-10">
+                <div
+                  class="w-32 h-32 bg-white flex items-center justify-center shadow-xl transform"
+                >
+                  <img
+                    src="./assets/mountain.jpg"
+                    alt="Project 2 Logo"
+                    class="w-32 h-32 object-fit"
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-1">
+                Documentary Series
+              </h3>
+              <p class="text-gray-100 mb-2 max-w-xs">
+                Award-winning documentary storytelling from Nepal’s mountains to
+                the world stage.
+              </p>
+              <a href="#" class="inline-block mt-2 px-6 py-2 loading-hover">
+                <span>Watch Trailer</span>
+              </a>
+            </div>
+          </div>
+          <!-- Project 3 -->
+          <div class="flex items-center gap-8 relative lg:right-80">
+            <div class="relative flex flex-col items-center min-w-[180px]">
+              <div class="relative z-10">
+                <div
+                  class="w-32 h-32 bg-white flex items-center justify-center shadow-xl transform"
+                >
+                  <img
+                    src="./assets/voter.jpeg"
+                    alt="Project 3 Logo"
+                    class="w-32 h-32 object-fit"
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-semibold text-white mb-1">
+                Voter Awareness PSA
+              </h3>
+              <p class="text-gray-100 mb-2 max-w-xs">
+                Impactful radio and media campaigns fostering civic
+                participation across Nepal.
+              </p>
+              <a
+                href="#"
+                class="inline-block mt-2 px-6 py-2 bg-white loading-hover"
+              >
+                <spna>Learn More</spna>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- latest from newspolar -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2
+          class="text-black text-3xl md:text-4xl font-semibold mb-10 text-left drop-shadow-sm"
+        >
+          Latest from Newspolar
+        </h2>
+        <div
+          id="news-container"
+          class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <!-- News cards by js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- latest from E-newspolar -->
+    <section class="py-12">
+      <div class="max-w-7xl mx-auto px-4">
+        <h2
+          class="text-black text-3xl md:text-4xl font-semibold mb-10 text-left drop-shadow-sm"
+        >
+          Latest from Enewspolar
+        </h2>
+        <div
+          id="enews-container"
+          class="grid gap-6 md:gap-8 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <!-- News cards by js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- contact form part -->
+    <!-- <section class="bg-white py-24 px-4">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+
+        <div>
+          <div class="flex items-center mb-6">
+            <h2 class="text-4xl md:text-5xl font-semibold text-[#2e2451]">
+              Let’s Chat About Your Goals
+            </h2>
+          </div>
+          <p class="text-base text-[#363c59] max-w-lg">
+            Fill out the form and our team will be in touch to share how Third
+            Pole Group’s platform can help you achieve your goals and maximize
+            your impact.
+          </p>
+        </div>
+
+        <form class="space-y-5">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+            <input
+              type="text"
+              placeholder="Name"
+              class="rounded-lg bg-white border border-gray-300 px-5 py-3 text-lg focus:ring-2 focus:ring-[#21b250] focus:outline-none"
+              required
+            />
+            <input
+              type="email"
+              placeholder="Email"
+              class="rounded-lg bg-white border border-gray-300 px-5 py-3 text-lg focus:ring-2 focus:ring-[#21b250] focus:outline-none"
+              required
+            />
+          </div>
+          <input
+            type="tel"
+            placeholder="Phone"
+            class="rounded-lg bg-white border border-gray-300 px-5 py-3 text-lg w-full focus:ring-2 focus:ring-[#21b250] focus:outline-none"
+          />
+          <input
+            type="text"
+            placeholder="Company"
+            class="rounded-lg bg-white border border-gray-300 px-5 py-3 text-lg w-full focus:ring-2 focus:ring-[#21b250] focus:outline-none"
+          />
+          <select
+            class="rounded-lg bg-white border border-gray-300 px-5 py-3 text-lg w-full focus:ring-2 focus:ring-[#21b250] focus:outline-none"
+          >
+            <option value="">Select topic of interest...</option>
+            <option>Media Production</option>
+            <option>Research & Collaboration</option>
+            <option>Capacity Building</option>
+            <option>Digital Strategy</option>
+            <option>Other</option>
+          </select>
+          <textarea
+            rows="4"
+            placeholder="Share any details for us to better assist you..."
+            class="rounded-lg bg-white border border-gray-300 px-5 py-3 text-lg w-full focus:ring-2 focus:ring-[#21b250] focus:outline-none"
+          ></textarea>
+          <button
+            type="submit"
+            class="px-8 py-3 rounded-full bg-[#ec1f28] text-white font-semibold text-lg shadow hover:opacity-90 transition"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </section> -->
+
+    <!-- footer part -->
+    <footer class="bg-gray-100 pt-12 pb-6 px-4 mt-10">
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row md:items-start md:justify-between gap-8"
+      >
+        <!-- Logo -->
+        <div
+          class="flex-shrink-0 flex flex-col items-center md:items-start w-full md:w-auto mb-8 md:mb-0"
+        >
+          <img
+            src="./assets/logo1.svg"
+            alt="Third Pole Group"
+            class="h-14 mb-4"
+          />
+          <!-- Optional tagline below logo -->
+          <div class="text-gray-500 text-sm">
+            Empowering Media, Research & Storytelling
+          </div>
+        </div>
+        <div class="w-full flex md:justify-end">
+          <div
+            class="grid grid-cols-1 md:grid-cols-3 gap-10 w-full md:w-auto text-center md:text-center"
+          >
+            <!-- What We Do -->
+            <div>
+              <h4
+                class="font-bold text-[#21194d] mb-2 tracking-wide uppercase text-base"
+              >
+                WHAT WE DO
+              </h4>
+              <ul class="space-y-1">
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >News Portal Publishing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Documentary & TV/Radio Production</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Advertising & PSA Design</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Research & Publications</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Projects -->
+            <div>
+              <h4
+                class="font-bold text-[#21194d] mb-2 tracking-wide uppercase text-base"
+              >
+                PROJECTS & INITIATIVES
+              </h4>
+              <ul class="space-y-1">
+                <li>
+                  <a
+                    href="https://www.newspolar.com"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    target="_blank"
+                    >NewsPolar</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://enewspolar.com"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    target="_blank"
+                    >eNewsPolar (English)</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Parliamentary Leadership Documentation</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Cross-cultural Collaboration</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <!-- Company -->
+            <div>
+              <h4
+                class="font-bold text-[#21194d] mb-2 tracking-wide uppercase text-base"
+              >
+                COMPANY
+              </h4>
+              <ul class="space-y-1">
+                <li>
+                  <a
+                    href="#about"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >About Us</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#team"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Our Team</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#contact"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Contact</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="#careers"
+                    class="hover:underline text-gray-700 hover:text-[#ec1f28]"
+                    >Careers</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Bottom row -->
+      <div
+        class="max-w-7xl mx-auto flex flex-col md:flex-row md:justify-between items-center border-t border-[#21194d]/20 mt-10 pt-4 gap-4"
+      >
+        <!-- Left Copyright -->
+        <div class="text-xs md:text-sm text-gray-500">
+          &copy; 2025 Third Pole Group Pvt. Ltd. All rights reserved.
+        </div>
+        <!-- Middle: Policy Links -->
+        <div class="flex flex-wrap gap-4 text-xs md:text-sm text-[#21194d]">
+          <a href="#" class="hover:underline">Privacy Policy</a>
+          <a href="#" class="hover:underline">Cookie Policy</a>
+          <a href="#" class="hover:underline">Takedown Policy</a>
+          <a href="#" class="hover:underline">Terms &amp; Conditions</a>
+        </div>
+        <!-- Right Social Icons -->
+        <div class="flex gap-4">
+          <a href="#" class="text-[#21194d] hover:text-[#0d6db1] text-xl"
+            ><i class="fab fa-facebook-square"></i
+          ></a>
+          <a href="#" class="text-[#21194d] hover:text-[#000] text-xl"
+            ><i class="fab fa-x-twitter"></i
+          ></a>
+          <a href="#" class="text-[#21194d] hover:text-[#e1306c] text-xl"
+            ><i class="fab fa-instagram"></i
+          ></a>
+          <a href="#" class="text-[#21194d] hover:text-[#0d6db1] text-xl"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- scripts -->
+    <script src="./scripts/index.js"></script>
+    <script src="./scripts/new.js"></script>
+    <!-- <script src="./scripts/enews.js"></script> -->
+  </body>
+</html>
+
+<!-- [Hero / Intro] +
+[About Us (short version)]+
+[Our Business / What We Do] +
+[Featured Projects / Impact]+
+[Clients & Partners]
+[Contact / Inquiry Form] +
+[Footer]+ -->

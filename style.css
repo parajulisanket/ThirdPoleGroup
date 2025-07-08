@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Poppins", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+/* animation for down arrow */
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-30%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
+  }
+}
+
+.bounce-arrow {
+  animation: bounce 2s infinite;
+}
+
+/* for about block animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.block-animate {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+.block-animate.show {
+  animation: fadeUp 0.8s cubic-bezier(0.33, 1, 0.68, 2) forwards;
+}
+
+/* btn hover effect */
+.loading-hover {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  color: #0d6db1;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+
+.loading-hover::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #000 0%, #000 100%);
+  transition: left 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 1;
+  opacity: 0.9;
+}
+
+.loading-hover:hover::before,
+.loading-hover:active::before {
+  left: 0;
+}
+
+.loading-hover:hover,
+.loading-hover:active {
+  color: #fff;
+}
+
+.loading-hover > * {
+  position: relative;
+  z-index: 2;
+}
+/* text hover effect */
+.nav-loading-hover {
+  position: relative;
+  display: inline-block;
+  color: black;
+  background: transparent;
+  cursor: pointer;
+  transition: color 0.3s;
+  overflow: hidden;
+}
+
+.nav-loading-hover .text {
+  position: relative;
+  z-index: 2;
+  transition: color 0.5s;
+}
+
+.nav-loading-hover::before {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0%;
+  height: 100%;
+  color: #ec1f28;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 3;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+  pointer-events: none;
+}
+
+.nav-loading-hover:hover::before,
+.nav-loading-hover:active::before {
+  width: 100%;
+}
+
+.nav-loading-hover:hover .text,
+.nav-loading-hover:active .text {
+  color: transparent;
+}
+
+/* #21b250 green
+#ec1f28 red 
+ #0d6db1 blue */
