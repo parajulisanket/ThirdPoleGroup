@@ -126,6 +126,10 @@ html {
 .hexagon {
   clip-path: polygon(25% 6%, 75% 6%, 100% 50%, 75% 94%, 25% 94%, 0% 50%);
 }
+.hexagon:hover svg {
+  transform: rotate(90deg) !important;
+  transition: transform 0.3s;
+}
 
 /* #21b250 green
 #ec1f28 red 
