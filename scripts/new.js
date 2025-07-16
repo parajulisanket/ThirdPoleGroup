@@ -48,10 +48,10 @@ function renderNews(news, containerId) {
     `.trim();
 
     card.innerHTML = `
-      <img src="${img}" alt="${title}" class="mb-4 h-44 w-full object-cover" />
+      <img src="${img}" alt="${title}" class="mb-4 h-60 w-full object-cover" />
       <h3 class="font-semibold text-lg text-blue-900 mb-2 p-4 tracking-wide">${title}</h3>
-      <p class="text-gray-600 mb-4 text-sm px-4 tracking-wider text-justify">${excerpt}</p>
-      <a href="${post.link}" target="_blank" class="text-[#ec1f28] hover:underline px-4 mt-auto mb-2">Read more &rarr;</a>
+
+      <a href="${post.link}" target="_blank" class="text-[#ec1f28] hover:underline px-4 mt-auto mb-2 w-fit">Read more &rarr;</a>
     `;
     container.appendChild(card);
   });
