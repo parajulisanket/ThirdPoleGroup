@@ -70,3 +70,10 @@ window.addEventListener("scroll", () => {
 backToTopButton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
+document.querySelectorAll("#sideNav .side-link").forEach((link) => {
+  link.addEventListener("click", () => {
+    sideNav.classList.add("opacity-0", "pointer-events-none");
+    sideNav.classList.remove("opacity-100");
+  });
+});
